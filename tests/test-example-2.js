@@ -1,27 +1,41 @@
 const assert = require('assert');
 
-const checkNumberIsOkay = function(num) {
-    if(num === 3) {
-        return `number ${num} is not okay`
-    }
-
-    if(num > 10 ) {
-        return `number ${num} is doing great!`
-    }
-
-    if(num <= 10) {
-        return `number ${num} is okay`
-    }
+const addTwoTogether = function(num1, num2) {
+    return num1 + num2;
 }
 
-describe('The number is okay', function() {
-    it('should be great if its over 10', function() {
-        assert.equal(checkNumberIsOkay(11), 'number 11 is doing great!')
+describe('adding numbers together works', function() {
+
+    before(function () {
+        console.log('this is the before hook')
     })
-    it('should be okay if its equal to 10', function() {
-        assert.equal(checkNumberIsOkay(10), 'number 10 is okay')
+
+    beforeEach(function () {
+        console.log('this is the before each hook')
     })
-    it('should be okay if its under 10', function() {
-        assert.equal(checkNumberIsOkay(3), 'number 3 is okay')
+
+    after(function() {
+        console.log('this is the after hook')
+    })
+
+    it('3 + 3 should equal 6', function() {
+        assert.equal(addTwoTogether(3, 3), 6);
+    })
+
+    it('4+4 should equal 8', function() {
+        assert.equal(addTwoTogether(4,4), 8);
+    })
+
+    describe('adding 3 numbers together works', function() {
+        //before(function () {})
+        it('3 + 3 + 3 should equal 9', function() {
+            let actual = 3+3+3
+            assert.equal(actual, 9);
+        })
+
+        it('4+4+ 4 should equal 12', function() {
+            let actual = 4+4+4
+            assert.equal(actual, 12);
+        })
     })
 })
