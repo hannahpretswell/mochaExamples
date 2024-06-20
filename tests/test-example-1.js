@@ -6,10 +6,12 @@ const addTwoTogether = function(num1, num2) {
 
 describe('adding numbers together works', function() {
     it('3 + 3 should equal 6', function() {
-        assert.equal(addTwoTogether(3, 3), 7);
+        const actual = addTwoTogether(3, 3)
+        assert.equal(actual, 6);
     })
 
     it('4 + 4 should equal 8', function() {
-        assert.equal(addTwoTogether(4,4), 8);
+        const actual = addTwoTogether(4, 4)
+        assert.equal(actual, 8);
     })
 })
