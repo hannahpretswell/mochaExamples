@@ -8,7 +8,7 @@ describe('',  function() {
     }
     //
     before(function () {
-        console.log('---> test 3 before, mocha worker:', process.env.MOCHA_WORKER_ID)
+        console.log('---> test 4 before, mocha worker:', process.env.MOCHA_WORKER_ID)
     })
 
     // beforeEach(function () {
@@ -16,10 +16,10 @@ describe('',  function() {
     // })
 
     after(function() {
-        console.log('---> test 3 after, mocha worker:', process.env.MOCHA_WORKER_ID)
+        console.log('---> test 4 after, mocha worker:', process.env.MOCHA_WORKER_ID)
     })
 
-    it('test-3', function() {
-        console.log('test 3, mocha worker:', process.env.MOCHA_WORKER_ID)
+    it('test-4', function() {
+        console.log('test 4, mocha worker:', process.env.MOCHA_WORKER_ID)
     })
 })

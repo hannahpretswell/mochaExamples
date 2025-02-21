@@ -1,5 +1,5 @@
 //delete require.cache[require.resolve('./parallelhooks')]
-const {assert} = require('./parallelhooks')
+//const {assert} = require('./parallelhooks')
 
 describe('', function() {
 

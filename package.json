@@ -9,8 +9,8 @@
     "allGlobalHooksTests": "mocha 'testsWithGlobalHooks'",
     "test-1": "mocha 'testsWithGlobalHooks/test-hook-1.js'",
     "test-2": "mocha 'testsWithGlobalHooks/test-hook-2.js'",
-    "parallelTests": "mocha --parallel --jobs 2 'testsWithParallel'",
-    "sequentialTests": "mocha 'testsWithParallel'"
+    "parallelTests": "mocha --parallel --jobs 2 --require 'testsWithParallel/parallelhooks.js' 'testsWithParallel'",
+    "sequentialTests": "mocha --require 'testsWithParallel/parallelhooks.js' 'testsWithParallel'"
   },
   "author": "",
   "license": "ISC",
